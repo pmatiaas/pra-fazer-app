@@ -4,12 +4,12 @@
 node_modules/
 
 # Expo
-.env
 .expo/
 dist/
 web-build/
 
 # Native
+.env
 *.orig.*
 *.jks
 *.p8
