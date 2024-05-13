@@ -1,9 +1,11 @@
 import { View, Text, TextInput, TouchableOpacity, Image } from 'react-native'
-import React from 'react'
+import React, { useState } from 'react'
 import styles from './style'
 
 export default function Login({ navigation }) {
-    let errorLogin = null
+    const[email, setEmail] = useState("")
+    const[password, setPassword] = useState("")
+    const[errorLogin, setLogin] = useState("")
 
     return (
         <View style={styles.container}>
@@ -16,11 +18,16 @@ export default function Login({ navigation }) {
             <TextInput
                 style={styles.input}
                 placeholder='E-mail'
+                value={email}
+                onChangeText={setEmail}
             />
 
             <TextInput
                 style={styles.input}
                 placeholder='Senha'
+                value={password}
+                onChangeText={setPassword}
+                secureTextEntry={true}
             />
 
             <TouchableOpacity style={styles.button}>
