@@ -1,12 +1,13 @@
 import { initializeApp } from "firebase/app";
 
 const firebaseConfig = {
-    apiKey: 'AIzaSyBf3CQOozUNedTus8I0SuLjWC_7YT-dZ_U',
-    authDomain: "to-do-list-45875.firebaseapp.com",
-    projectId: "to-do-list-45875",
-    storageBucket: "to-do-list-45875.appspot.com",
-    messagingSenderId: "904179288240",
-    appId: "1:904179288240:web:b67a3484e94e0a23421375"
+    apiKey: "AIzaSyBf3CQOozUNedTus8I0SuLjWC_7YT-dZ_U",
+    authDomain: "pra-fazer-app.firebaseapp.com",
+    databaseURL: "https://pra-fazer-app-default-rtdb.firebaseio.com",
+    projectId: "pra-fazer-app",
+    storageBucket: "pra-fazer-app.appspot.com",
+    messagingSenderId: "683990725370",
+    appId: "1:683990725370:web:07fa036c7b2f9a0163cf43"
 };
 
 // Initialize Firebase

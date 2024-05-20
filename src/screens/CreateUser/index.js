@@ -1,8 +1,11 @@
 import { View, Text, TextInput, TouchableOpacity } from 'react-native'
 import React, { useState } from 'react'
-import styles from './style'
 import { firebase } from '../../services/firebaseConfig';
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { getDatabase, ref, set } from 'firebase/database'
+import styles from './style'
+
+const db = getDatabase();
 
 export default function CreateUser({ navigation }) {
 
@@ -31,9 +34,16 @@ export default function CreateUser({ navigation }) {
         createUserWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 const user = userCredential.user;
+
                 console.log(user)
 
                 if (user) {
+                    
+                set(ref(db, 'users/' + user.uid), {
+                    nome: userName,
+                    email: email,
+                  });
+
                     navigation.navigate("Tabs")
                 }
             })
