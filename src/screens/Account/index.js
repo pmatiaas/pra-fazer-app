@@ -36,7 +36,6 @@ export default function Account({ navigation }) {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Dados do usuários</Text>
       <Text style={styles.info}>Nome: {nome}</Text>
       <Text style={styles.info}>Email: {email}</Text>
 
